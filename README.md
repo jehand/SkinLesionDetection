@@ -6,7 +6,7 @@ A web-app made to automatically detect the type of skin lesion present using ML 
 
 1. Deliverables - contains PDFs of all the deliverable files
 
-## References
+## Data
 
 Our data was extracted from the “ISIC 2018: Skin Lesion Analysis Towards Melanoma Detection” grand challenge datasets [1][2].
 
