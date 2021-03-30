@@ -4,7 +4,9 @@ A web-app made to automatically detect the type of skin lesion present using ML 
 
 ## Table of Contents
 
-1. Deliverables - contains PDFs of all the deliverable files
+1. Deliverables - Contains PDFs of all the deliverable files
+2. Project.ipynb - Notebook for the training of the models
+3. Plots - Training plot and confusion matrix for the cancer model
 
 ## Data
 
