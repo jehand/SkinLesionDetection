@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-# Import your models
+# Import your modelst
 from predictor import predict
 
 app = Flask(__name__)
