@@ -21,9 +21,9 @@ def predict(request):
     cancer = load_model("backend/models/cancer_model.h5")
     predict_canc = cancer_types[np.argmax(cancer.predict(img))]
     
-    #diagnosis = load_model("backend/models/cancer_model.h5")
-    #predict_diagnosis = diagnosis_types[np.argmax(diagnosis.predict(img))]
-    return [predict_canc]#, predict_diagnosis]
+    diagnosis = load_model("backend/models/diagnosis_model.h5")
+    predict_diagnosis = diagnosis_types[np.argmax(diagnosis.predict(img))]
+    return [predict_canc, predict_diagnosis]
     
 if __name__ == "__main__": #Just to test on a sample image
     print(predict("../data/ISIC2018_Task3_Training_Input/ISIC_0024306.jpg"))
