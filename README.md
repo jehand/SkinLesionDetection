@@ -1,12 +1,42 @@
 # Skin Lesion Detection Using Machine Learning!
 
-A web-app made to automatically detect the type of skin lesion present using ML (CNN).
+A webapp made to automatically detect the type of skin lesion present using a CNN and also give the user the predicted optimal technique for detection. The model was built using Tensorflow with data from Task 3 of the ISIC2018 challenge.
 
 ## Table of Contents
 
-1. Deliverables - Contains PDFs of all the deliverable files
-2. Project.ipynb - Notebook for the training of the models
-3. Plots - Training plot and confusion matrix for the cancer model
+1. Backend - Contains Python files and the Flask server to make a prediction
+2. Client - Contains the code to run the webapp
+3. Deliverables - Contains PDFs of all the deliverable files
+4. Plots - Training plot and confusion matrix for the cancer model
+5. Project.ipynb - Notebook for the training of the models
+
+## Running the app
+To run the webapp, we first need to install all dependencies and get the flask server running! To do this, we first need to move into the "backend" directory. We do this using the command:
+```
+cd backend
+```
+Now, to install all backend dependencies run the command:
+```
+pip install -r requirements.txt
+```
+After this, you should be able to start the Flask server. We do this by running:
+```
+python app.py
+```
+The Flask server should begin running after this. If not, feel free to reach out to us and we will look into it! Now for the frontend. Open a new terminal window (to not disturb the server) and switch into the client directory using:
+```
+cd client
+```
+Next, install the frontend dependencies using:
+```
+npm install
+```
+Finally, we can now run the webapp! Run the following commands and the webapp should open in your http://localhost:3000 (if it does not, again feel free to contact us).
+```
+npm run build
+npm run start
+```
+Once the webpage opens, upload your image and click "Get Prediction" to get your prediction on the type of skin lesion present and the best methods for diagnosis. Happy predicting!
 
 ## Data
 
