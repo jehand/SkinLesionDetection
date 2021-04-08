@@ -1,27 +1,21 @@
-from flask import Flask, render_template, request
+from flask import Flask, request, jsonify
 # Import your modelst
-from predictor import predict
+from predictor import predict_cancer, predict_diagnosis
 
 app = Flask(__name__)
 
 # Base endpoint to perform prediction.
-"""
-@app.route('/', methods=['POST'])
-def make_prediction():
-    prediction = predict(request)
-    return render_template('index.html', prediction=prediction, generated_text=None, tab_to_show='mnist')
-
-
-@app.route('/', methods=['GET'])
-def load():
-    return render_template('index.html', prediction=None, generated_text=None, tab_to_show='mnist')
-"""
-
-@app.route('/predict/image', methods=['POST'])
+@app.route('/predict/cancer', methods=['POST'])
 def make_image_prediction():
-    prediction = predict(request)
-    print(prediction)
-    return str(prediction)
+    prediction_canc = predict_cancer(request)
+    print(prediction_canc)
+    return str(prediction_canc)
+
+@app.route('/predict/diagnosis', methods=['POST'])
+def make_diagnosis_prediction():
+    prediction_diag = predict_diagnosis(request)
+    print(prediction_diag)
+    return str(prediction_diag)
 
 if __name__ == '__main__':
     app.run(debug=True)
